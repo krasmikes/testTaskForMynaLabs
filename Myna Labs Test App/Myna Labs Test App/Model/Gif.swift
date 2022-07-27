@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Gif: Codable {
+class Gif: Codable, Hashable {
     let id: String
     let url: String
     let bitlyUrl: String
@@ -33,5 +33,13 @@ class Gif: Codable {
             case small = "fixed_width"
             case original
         }
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Gif, rhs: Gif) -> Bool {
+        return lhs.id == rhs.id
     }
 }

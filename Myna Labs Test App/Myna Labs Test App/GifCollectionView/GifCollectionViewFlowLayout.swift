@@ -16,6 +16,7 @@ class GifCollectionViewFlowLayout: UICollectionViewFlowLayout {
     weak var delegate: GifCollectionViewFlowLayoutDelegate?
 
     var numberOfColumns = 2
+    var numberOfItems = 0
     var cellPadding: CGFloat = 10
     private var cache: [UICollectionViewLayoutAttributes] = []
     private var contentHeight: CGFloat = 0
@@ -42,7 +43,7 @@ class GifCollectionViewFlowLayout: UICollectionViewFlowLayout {
         var column = 0
         var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
 
-        for item in 0..<collectionView.numberOfItems(inSection: 0) {
+        for item in 0..<numberOfItems {
             let indexPath = IndexPath(item: item, section: 0)
             var photoHeight: CGFloat = 180
             if let photoSize = delegate?.collectionView(collectionView, photoSizeAtIndexPath: indexPath) {
@@ -79,5 +80,9 @@ class GifCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cache[indexPath.item]
+    }
+
+    func clearCache() {
+        cache = [UICollectionViewLayoutAttributes]()
     }
 }

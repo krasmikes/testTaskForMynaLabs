@@ -15,6 +15,13 @@ enum Constants {
 
 class MainViewController: UIViewController {
     private let networkService = NetworkService.shared
+    private var data = [Gif]()
+    private lazy var dataSource = makeDataSource()
+    enum Section {
+        case main
+    }
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Gif>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Gif>
 
     private let collectionView: UICollectionView = {
         let layout = GifCollectionViewFlowLayout()
@@ -26,8 +33,6 @@ class MainViewController: UIViewController {
         return collectionView
     }()
 
-    private var data = [Gif]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -36,7 +41,6 @@ class MainViewController: UIViewController {
             layout.delegate = self
         }
         collectionView.delegate = self
-        collectionView.dataSource = self
 
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -44,6 +48,29 @@ class MainViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+        applySnapshot(animatingDifferences: false)
+    }
+
+    func makeDataSource() -> DataSource {
+        let dataSource = DataSource(
+            collectionView: collectionView,
+            cellProvider: { (collectionView, indexPath, gif) -> UICollectionViewCell? in
+                let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: Constants.gifCellId,
+                    for: indexPath)
+                as? GifCollectionViewCell
+                cell?.configureCell(withGif: gif)
+                cell?.sizeToFit()
+                return cell
+            })
+        return dataSource
+    }
+
+    func applySnapshot(animatingDifferences: Bool = false) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(data)
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
     }
 
     private func loadData() {
@@ -53,7 +80,13 @@ class MainViewController: UIViewController {
             case .success(let response):
                 DispatchQueue.main.async {
                     self?.data.append(contentsOf: response.data)
-                    self?.collectionView.reloadData()
+                    if let layout = self?.collectionView.collectionViewLayout as? GifCollectionViewFlowLayout {
+                        layout.invalidateLayout()
+                        layout.clearCache()
+                        layout.numberOfItems = self?.data.count ?? 0
+                        layout.prepare()
+                    }
+                    self?.applySnapshot()
                 }
                 print(response.data)
             case .failure(let error):
@@ -63,17 +96,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, GifCollectionViewFlowLayoutDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.gifCellId, for: indexPath) as! GifCollectionViewCell
-        cell.configureCell(withGif: data[indexPath.row])
-        return cell
-    }
-
+extension MainViewController: UICollectionViewDelegate, GifCollectionViewFlowLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, photoSizeAtIndexPath indexPath:IndexPath) -> CGSize {
         if let height = Int(data[indexPath.row].images.small.height),
            let width = Int(data[indexPath.row].images.small.width) {
@@ -85,8 +108,16 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let shareViewController = ShareViewController(gif: data[indexPath.row])
+        guard let gif = dataSource.itemIdentifier(for: indexPath) else { return }
+
+        let shareViewController = ShareViewController(gif: gif)
         shareViewController.modalPresentationStyle = .overFullScreen
         navigationController?.pushViewController(shareViewController, animated: true)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == data.count - 10 {
+            loadData()
+        }
     }
 }
