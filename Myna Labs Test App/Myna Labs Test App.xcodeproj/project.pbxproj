@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29522402289001A00057DDBA /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29522401289001A00057DDBA /* GifCollectionViewCell.swift */; };
+		29522404289021730057DDBA /* GifCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29522403289021730057DDBA /* GifCollectionViewFlowLayout.swift */; };
+		295224072890319B0057DDBA /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295224062890319B0057DDBA /* ShareViewController.swift */; };
+		2952240928903C4C0057DDBA /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2952240828903C4C0057DDBA /* Gif.swift */; };
+		2952240B289041470057DDBA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2952240A289041470057DDBA /* NetworkService.swift */; };
+		2952240F2890420C0057DDBA /* GetTrendingGifs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2952240E2890420C0057DDBA /* GetTrendingGifs.swift */; };
+		295224112890455F0057DDBA /* Giphy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 295224102890455F0057DDBA /* Giphy-Info.plist */; };
+		29F7774E288FFD660051FCF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7774D288FFD660051FCF6 /* AppDelegate.swift */; };
+		29F77750288FFD660051FCF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F7774F288FFD660051FCF6 /* SceneDelegate.swift */; };
+		29F77752288FFD660051FCF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F77751288FFD660051FCF6 /* MainViewController.swift */; };
+		29F77757288FFD670051FCF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29F77756288FFD670051FCF6 /* Assets.xcassets */; };
+		29F7775A288FFD670051FCF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29F77758288FFD670051FCF6 /* LaunchScreen.storyboard */; };
+		537EC617CDB0FF13C143CD11 /* Pods_Myna_Labs_Test_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DA50787F50A9396C265CD2 /* Pods_Myna_Labs_Test_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01DA50787F50A9396C265CD2 /* Pods_Myna_Labs_Test_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myna_Labs_Test_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29522401289001A00057DDBA /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		29522403289021730057DDBA /* GifCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		295224062890319B0057DDBA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		2952240828903C4C0057DDBA /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		2952240A289041470057DDBA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2952240E2890420C0057DDBA /* GetTrendingGifs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTrendingGifs.swift; sourceTree = "<group>"; };
+		295224102890455F0057DDBA /* Giphy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Giphy-Info.plist"; sourceTree = "<group>"; };
+		29F7774A288FFD660051FCF6 /* Myna Labs Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myna Labs Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F7774D288FFD660051FCF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29F7774F288FFD660051FCF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		29F77751288FFD660051FCF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		29F77756288FFD670051FCF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29F77759288FFD670051FCF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29F7775B288FFD670051FCF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB5E41FB1FAB3060487DA01 /* Pods-Myna Labs Test App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myna Labs Test App.debug.xcconfig"; path = "Target Support Files/Pods-Myna Labs Test App/Pods-Myna Labs Test App.debug.xcconfig"; sourceTree = "<group>"; };
+		B22AB6314DB4350902A7FEE0 /* Pods-Myna Labs Test App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myna Labs Test App.release.xcconfig"; path = "Target Support Files/Pods-Myna Labs Test App/Pods-Myna Labs Test App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29F77747288FFD660051FCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537EC617CDB0FF13C143CD11 /* Pods_Myna_Labs_Test_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C93D496277E9FCD41452A2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FB5E41FB1FAB3060487DA01 /* Pods-Myna Labs Test App.debug.xcconfig */,
+				B22AB6314DB4350902A7FEE0 /* Pods-Myna Labs Test App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		295224052890311A0057DDBA /* GifCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				29522401289001A00057DDBA /* GifCollectionViewCell.swift */,
+				29522403289021730057DDBA /* GifCollectionViewFlowLayout.swift */,
+			);
+			path = GifCollectionView;
+			sourceTree = "<group>";
+		};
+		29522412289050C60057DDBA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				295224102890455F0057DDBA /* Giphy-Info.plist */,
+				2952240E2890420C0057DDBA /* GetTrendingGifs.swift */,
+				2952240A289041470057DDBA /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		295224132890511E0057DDBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2952240828903C4C0057DDBA /* Gif.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		29F77741288FFD660051FCF6 = {
+			isa = PBXGroup;
+			children = (
+				29F7774C288FFD660051FCF6 /* Myna Labs Test App */,
+				29F7774B288FFD660051FCF6 /* Products */,
+				0C93D496277E9FCD41452A2E /* Pods */,
+				2A7169A335439C0CA2608C39 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		29F7774B288FFD660051FCF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29F7774A288FFD660051FCF6 /* Myna Labs Test App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29F7774C288FFD660051FCF6 /* Myna Labs Test App */ = {
+			isa = PBXGroup;
+			children = (
+				29F7774D288FFD660051FCF6 /* AppDelegate.swift */,
+				29F7774F288FFD660051FCF6 /* SceneDelegate.swift */,
+				29522412289050C60057DDBA /* Networking */,
+				295224132890511E0057DDBA /* Model */,
+				29F77751288FFD660051FCF6 /* MainViewController.swift */,
+				295224062890319B0057DDBA /* ShareViewController.swift */,
+				295224052890311A0057DDBA /* GifCollectionView */,
+				29F77756288FFD670051FCF6 /* Assets.xcassets */,
+				29F77758288FFD670051FCF6 /* LaunchScreen.storyboard */,
+				29F7775B288FFD670051FCF6 /* Info.plist */,
+			);
+			path = "Myna Labs Test App";
+			sourceTree = "<group>";
+		};
+		2A7169A335439C0CA2608C39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01DA50787F50A9396C265CD2 /* Pods_Myna_Labs_Test_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29F77749288FFD660051FCF6 /* Myna Labs Test App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29F7775E288FFD670051FCF6 /* Build configuration list for PBXNativeTarget "Myna Labs Test App" */;
+			buildPhases = (
+				784E50A0DD76CD7670C160FF /* [CP] Check Pods Manifest.lock */,
+				29F77746288FFD660051FCF6 /* Sources */,
+				29F77747288FFD660051FCF6 /* Frameworks */,
+				29F77748288FFD660051FCF6 /* Resources */,
+				A79ABC021E2DF135180797F1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Myna Labs Test App";
+			productName = "Myna Labs Test App";
+			productReference = 29F7774A288FFD660051FCF6 /* Myna Labs Test App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29F77742288FFD660051FCF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					29F77749288FFD660051FCF6 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 29F77745288FFD660051FCF6 /* Build configuration list for PBXProject "Myna Labs Test App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29F77741288FFD660051FCF6;
+			productRefGroup = 29F7774B288FFD660051FCF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29F77749288FFD660051FCF6 /* Myna Labs Test App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29F77748288FFD660051FCF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F7775A288FFD670051FCF6 /* LaunchScreen.storyboard in Resources */,
+				295224112890455F0057DDBA /* Giphy-Info.plist in Resources */,
+				29F77757288FFD670051FCF6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		784E50A0DD76CD7670C160FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Myna Labs Test App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79ABC021E2DF135180797F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myna Labs Test App/Pods-Myna Labs Test App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myna Labs Test App/Pods-Myna Labs Test App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Myna Labs Test App/Pods-Myna Labs Test App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29F77746288FFD660051FCF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295224072890319B0057DDBA /* ShareViewController.swift in Sources */,
+				29F77752288FFD660051FCF6 /* MainViewController.swift in Sources */,
+				2952240B289041470057DDBA /* NetworkService.swift in Sources */,
+				29F7774E288FFD660051FCF6 /* AppDelegate.swift in Sources */,
+				29F77750288FFD660051FCF6 /* SceneDelegate.swift in Sources */,
+				2952240F2890420C0057DDBA /* GetTrendingGifs.swift in Sources */,
+				29522404289021730057DDBA /* GifCollectionViewFlowLayout.swift in Sources */,
+				2952240928903C4C0057DDBA /* Gif.swift in Sources */,
+				29522402289001A00057DDBA /* GifCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29F77758288FFD670051FCF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29F77759288FFD670051FCF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29F7775C288FFD670051FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29F7775D288FFD670051FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29F7775F288FFD670051FCF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB5E41FB1FAB3060487DA01 /* Pods-Myna Labs Test App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Myna Labs Test App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.krasmikes.Myna-Labs-Test-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29F77760288FFD670051FCF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22AB6314DB4350902A7FEE0 /* Pods-Myna Labs Test App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GB4R5FUHG3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Myna Labs Test App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.krasmikes.Myna-Labs-Test-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29F77745288FFD660051FCF6 /* Build configuration list for PBXProject "Myna Labs Test App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29F7775C288FFD670051FCF6 /* Debug */,
+				29F7775D288FFD670051FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29F7775E288FFD670051FCF6 /* Build configuration list for PBXNativeTarget "Myna Labs Test App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29F7775F288FFD670051FCF6 /* Debug */,
+				29F77760288FFD670051FCF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29F77742288FFD660051FCF6 /* Project object */;
+}

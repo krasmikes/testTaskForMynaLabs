@@ -1,0 +1,4 @@
+target 'Myna Labs Test App' do
+  use_frameworks!
+  pod 'Gifu'
+end
