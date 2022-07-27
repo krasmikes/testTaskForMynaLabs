@@ -7,21 +7,16 @@
 
 import UIKit
 
-enum Constants {
-    static let spacing: CGFloat = 10
-    static let gifCellId = "gifCellId"
-    static let limit = 30
-}
-
 class MainViewController: UIViewController {
     private let networkService = NetworkService.shared
     private var data = [Gif]()
     private lazy var dataSource = makeDataSource()
+
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Gif>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Gif>
     enum Section {
         case main
     }
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, Gif>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Gif>
 
     private let collectionView: UICollectionView = {
         let layout = GifCollectionViewFlowLayout()
@@ -88,7 +83,6 @@ class MainViewController: UIViewController {
                     }
                     self?.applySnapshot()
                 }
-                print(response.data)
             case .failure(let error):
                 print(error)
             }
@@ -120,4 +114,11 @@ extension MainViewController: UICollectionViewDelegate, GifCollectionViewFlowLay
             loadData()
         }
     }
+}
+
+enum Constants {
+    static let spacing: CGFloat = 10
+    static let gifCellId = "gifCellId"
+    static let tagCellId = "tagCellId"
+    static let limit = 30
 }

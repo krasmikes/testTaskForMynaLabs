@@ -25,7 +25,6 @@ struct GetTrendingGifsRequest {
 
     func decode(_ data: Data) throws -> GetTrendingGifsResponse {
         let decoder = JSONDecoder()
-        print(data)
         let response = try decoder.decode(GetTrendingGifsResponse.self, from: data)
         return response
     }

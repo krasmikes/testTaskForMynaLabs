@@ -47,7 +47,6 @@ final class NetworkService {
         }
 
         var urlRequest = URLRequest(url: url)
-        print("URL IS: \(url)")
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
                 return completion(.failure(error))
